@@ -1,0 +1,22 @@
+<div class="w-full h-full">
+  <mat-toolbar color="accent">
+    <button mat-icon-button class="focus:outline-none" (click)="menuNav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="w-full h-full">
+    <mat-sidenav #menuNav mode="side" [opened]="true">
+      <div class="w-40">
+        <mat-nav-list>
+          <a mat-list-item routerLinkActive="active-link">
+            <span></span>
+          </a>
+        </mat-nav-list>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
